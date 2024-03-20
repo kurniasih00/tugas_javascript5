@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h2>Letakan Kursor ke masing-masing kotak untuk melihat gambar</h2>
+    <div id="div1">
+        Hewan Kucing
+        <audio id="audio1" src="sound/audio_cat.mp3"></audio>
+    </div>
+
+    <div id="div2">
+        Hewan Anjing
+        <audio id="audio2" src="sound/audio_dog.mp3"></audio>
+    </div>
+
+    <div id="div3">
+        Hewan Kuda
+        <audio id="audio3" src="sound/audio_horse.mp3"></audio>
+    </div>
+
+    <div id="div4">
+        Hewan Kambing
+        <audio id="audio4" src="sound/audio_sheep.mp3"></audio>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+
+
+//ketikaa mousenya diatas gambar atau kotak maka hewannya bisa bersuara. tugas hari ini
+
+    $("document").ready(function(){
+        Swal.fire("Selamat Datang");
+        $("#div1").mouseover(function(){
+           $(this).css({
+            background: "url('https://i.pinimg.com/564x/d7/65/50/d7655024873c9bf107e732740ead21af.jpg')"
+           });
+           $("#audio1")[0].play();
+        });
+
+        $("div").mouseout(function(){
+            $(this).css({
+                background: "white"
+            });
+            $("#audio1")[0].pause();
+            $("#audio2")[0].pause();
+            $("#audio3")[0].pause();
+        });
+
+        $("#div2").mouseover(function(){
+           $(this).css({
+            background: "url('https://i.pinimg.com/564x/bf/ba/e0/bfbae0a6ea235b2e0ba30a8c249dadae.jpg')"
+           });
+           $("#audio2")[0].play();
+        });
+
+        $("#div3").mouseover(function(){
+           $(this).css({
+            background: "url('https://i.pinimg.com/564x/b6/c0/85/b6c08519d442dc278b4fb4d05ba0eb6a.jpg')"
+           });
+           $("#audio3")[0].play();
+        });
+
+        $("#div4").mouseover(function(){
+           $(this).css({
+            background: "url('https://i.pinimg.com/564x/65/cd/01/65cd0170886682d72ebcc0bb1eb81e81.jpg')"
+           });
+           $("#audio4")[0].play();
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    margin: auto;
+    background-color: deeppink;
+}
+#div1, #div2, #div3, #div4{
+    display: inline-block;
+    margin-top: 20px;
+    width: 43%;
+    color: maroon;
+    border: 3px solid maroon;
+    border-radius: 2%;
+    text-align: center;
+    background: white;
+    height: 450px;
+    cursor: pointer;
+    
+}
+h2{
+    color: bisque;
+}
